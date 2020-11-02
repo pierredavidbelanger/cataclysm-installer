@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Cataclysm Dark Days Ahead
+Comment=An open-source, single-player, role-playing roguelike game set in an apocalyptic future.
+Icon=/usr/share/cataclysm-dda/cataicon.ico
+Exec=/usr/bin/cataclysm-tiles
+Categories=Game;RolePlaying;
+Terminal=false
