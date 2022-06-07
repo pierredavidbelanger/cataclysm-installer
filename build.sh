@@ -38,6 +38,20 @@ if [ ! -d target/src/data/sound/CDDA-Soundpack ]; then
   mv target/tmp/CDDA-Soundpack-master/CDDA-Soundpack target/src/data/sound/
 fi
 
+if [ ! -d target/src/data/sound/Otopack+ModsUpdates ]; then
+  mkdir -p target/tmp
+  if [ ! -d target/tmp/Otopack-Mods-Updates-master/Otopack+ModsUpdates ]; then
+    if [ ! -f target/tmp/Otopack-Mods-Updates.zip ]; then
+      wget -O target/tmp/Otopack-Mods-Updates.zip https://github.com/Kenan2000/Otopack-Mods-Updates/archive/refs/heads/master.zip
+    fi
+    pushd target/tmp
+  	rm -rf Otopack-Mods-Updates-master
+    unzip Otopack-Mods-Updates.zip
+    popd
+  fi
+  mv target/tmp/Otopack-Mods-Updates-master/Otopack+ModsUpdates target/src/data/sound/
+fi
+
 cp cataclysm.desktop ~/.local/share/applications/
 
 sudo rm -rf /usr/share/cataclysm-dda
